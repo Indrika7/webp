@@ -12,6 +12,12 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  max-width: 1440px;
+  min-width: 320px;
+  margin: auto;
+}
+
 .image {
   display: flex;
   flex-direction: row;
@@ -34,8 +40,8 @@ html {
 .logo_left {
   color: #d67e34;
   border: 2px solid #d67e34;
-  height: 55px;
-  width: 55px;
+  height: 40px;
+  width: 40px;
 }
 
 .logo_right {
@@ -55,9 +61,25 @@ nav {
   color: white;
   height: 60px;
 }
-.menu{
+
+.menu-icon {
   display: flex;
-  flex-direction:row ;
+  flex-direction: column;
+  gap: 8px;
+  display: none;
+}
+
+.menu-icon li {
+  height: 3px;
+  width: 40px;
+  background-color: #d67e34;
+  display: flex;
+
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   font-family: "open sans";
   font-weight: bold;
@@ -65,6 +87,7 @@ nav {
   text-transform: uppercase;
   font-size: 12px;
 }
+
 .menu-items {
   display: flex;
   flex-direction: row;
@@ -86,6 +109,7 @@ nav {
   filter: invert(100%);
 
 }
+
 .contact-no {
   font-size: 15px;
 }
@@ -135,16 +159,30 @@ nav {
 .welcome em {
   font-style: normal;
   font-size: 70px;
-
 }
 
 p {
+  position: relative;
   margin-top: 3px;
   margin-bottom: 10px;
   font-size: 15px;
   font-family: "open sans";
   text-transform: uppercase;
   color: white
+}
+.welcome p span{
+  display: block;
+  position: absolute;
+  border: 1px solid white;
+  width: 50px;
+  top:8px;
+}
+.border-left{
+  left: -58px;
+}
+
+.border-right{
+  right: -58px;
 }
 
 .button2 {
@@ -160,8 +198,8 @@ p {
   text-transform: uppercase;
 }
 
-.intro{
-  color:#bc9060;
+.intro {
+  color: #bc9060;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -171,36 +209,40 @@ p {
   width: 100%;
 }
 
-.card{
+.card {
   height: 300px;
   width: 300px;
   background-color: white;
   box-shadow: 2px 7px 10px 2px rgb(113, 112, 112);
   text-transform: capitalize;
   padding-top: 48px;
-} 
-.info-heading{
+}
+
+.info-heading {
   margin: 15px;
   display: flex;
   justify-content: center;
   font-size: 22px;
 }
-.info-heading span{
+
+.info-heading span {
   color: #2c2c2c;
-  padding-right: 4px ;
+  padding-right: 4px;
 }
 
-.food-tray{
+.food-tray {
   height: 50px;
   display: flex;
+  align-items: center;
   justify-content: center;
   filter: invert(58%) sepia(33%) saturate(550%) hue-rotate(351deg) brightness(97%) contrast(81%);
 }
-.card p{
+
+.card p {
   margin-top: 25px;
   display: flex;
   justify-content: center;
-  color:  #656363;
+  color: #656363;
   text-transform: lowercase;
   text-align: center;
   font-size: 20px;
@@ -215,10 +257,10 @@ p {
   padding-top: 170px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
 }
 
-.banner span{
+.banner span {
   color: #2c2c2c;
 }
 
@@ -240,11 +282,12 @@ p {
   color: #656363;
   font-size: 14px;
   text-align: justify;
-  padding-top: 20px ;
+  padding-top: 20px;
 }
-.data-numbers{
+
+.data-numbers {
   font-family: "open sans";
-  color:#bc9060;
+  color: #bc9060;
   display: flex;
   list-style-type: none;
   gap: 25px;
@@ -255,17 +298,23 @@ p {
   text-align: center;
   font-size: 25px;
 }
-.data-numbers span{
+
+.data-numbers span {
   color: #2c2c2c;
   font-size: 14px;
 }
-.collage{
-  height:350px;
-  width: 400px;
-} 
 
-.delicious-food{
+.collage {
+  height: 350px;
+  width: 400px;
+}
+
+.delicious-food {
+  background-color: #2c2c2c;
   background-image: url(../assets/delicious-food.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
   height: 250px;
   width: 100%;
   padding: 60px;
@@ -274,20 +323,21 @@ p {
   justify-content: space-around;
 }
 
-.get-offer{
+.get-offer {
   color: #d67e34;
   font-size: 30px;
-  font-family: "ZCOOL XiaoWei";
-  font-weight: bold;
+  font-family: "cookie";
+  font-weight: normal;
 }
 
-.get-offer span{
+.get-offer span {
   color: white;
   font-size: 20px;
   font-family: "open sans";
+  font-weight: bold;
 }
 
-.button3{
+.button3 {
   background-color: #d67e34;
   width: 130px;
   height: 45px;
@@ -297,4 +347,94 @@ p {
   border: none;
   color: white;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    height: 550px;
+  }
+
+  .menu-icon {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    padding: 0%;
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .button1 {
+    display: none;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    top: 500px;
+  }
+
+  .card {
+    height: 240px;
+    width: 240px;
+  }
+
+  .banner {
+    flex-flow: column;
+    /* margin: 120px; */
+    padding-top: 500px;
+  }
+
+  .discover {
+    display: flex;
+    text-align: center;
+    margin-top: 100%;
+    padding-top: 250px;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .welcome {
+    margin: 0px;
+  }
+
+  .welcome h1 {
+    font-size: 25px;
+  }
+
+  .welcome em {
+    font-size: 45px;
+  }
+
+  .button2 {
+    display: none;
+  }
+
+  .collage {
+    width: 270px;
+    height: 230px;
+  }
+
+  .data-numbers {
+    flex-direction: column;
+    gap: 9px;
+    padding: 0%;
+  }
+
+  .delicious-food {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100%;
+  }
+
 }
