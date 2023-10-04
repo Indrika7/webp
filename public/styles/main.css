@@ -170,18 +170,19 @@ p {
   text-transform: uppercase;
   color: white
 }
-.welcome p span{
-  display: block;
+
+.welcome p span {
   position: absolute;
   border: 1px solid white;
   width: 50px;
-  top:8px;
+  top: 8px;
 }
-.border-left{
+
+.border-left {
   left: -58px;
 }
 
-.border-right{
+.border-right {
   right: -58px;
 }
 
@@ -260,7 +261,7 @@ p {
   justify-content: space-evenly;
 }
 
-.banner span {
+.banner .tag {
   color: #2c2c2c;
 }
 
@@ -292,6 +293,7 @@ p {
   list-style-type: none;
   gap: 25px;
   font-size: 20px;
+  padding: 0%;
 }
 
 .data-numbers li {
@@ -374,6 +376,11 @@ p {
     display: none;
   }
 
+  .welcome p .border-left,
+  .border-right {
+    display: none;
+  }
+
   nav img {
     display: none;
   }
@@ -381,7 +388,7 @@ p {
   .intro {
     flex-direction: column;
     align-items: center;
-    top: 500px;
+    top: 600px;
   }
 
   .card {
@@ -390,18 +397,23 @@ p {
   }
 
   .banner {
+    height: fit-content;
     flex-flow: column;
-    /* margin: 120px; */
-    padding-top: 500px;
+    text-align: center;
+    padding-top: 300px;
+  }
+
+  .story {
+    text-align: center;
   }
 
   .discover {
-    display: flex;
-    text-align: center;
-    margin-top: 100%;
+    /* display: flex;
+    text-align: center; */
+    margin: 30px;
     padding-top: 250px;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .welcome {
@@ -413,8 +425,8 @@ p {
   }
 
   .collage {
-    width: 270px;
-    height: 230px;
+    width: 350px;
+    height: 310px;
   }
 
   .data-numbers {
@@ -426,7 +438,46 @@ p {
   .delicious-food {
     flex-direction: column;
     text-align: center;
-    margin-top: 100%;
+    margin-top: 40px;
   }
 
+}
+
+@media screen and (max-width: 390px) {
+  .banner {
+    height: fit-content;
+    margin: 0%;
+    padding-top: 350px;
+  }
+
+  .welcome h1 {
+    font-size: 25px;
+  }
+
+  .welcome em {
+    font-size: 45px;
+  }
+
+  .intro {
+    top: 670px
+  }
+
+  .story {
+    text-align: center;
+  }
+
+  .discover {
+    padding-top: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .delicious-food {
+    margin-top: 40px;
+  }
+
+  .collage {
+    width: 280px;
+    height: 240px;
+  }
 }
