@@ -282,7 +282,7 @@ p {
   text-align: center;
   color: #656363;
   font-size: 14px;
-  text-align: justify;
+  text-align: center;
   padding-top: 20px;
 }
 
@@ -351,6 +351,46 @@ p {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 900px) {
+
+  .menu-items {
+    display: none;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .button1 {
+    display: none;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    padding: 0%;
+  }
+
+  .welcome h1 {
+    font-size: 35px;
+  }
+
+  .welcome em {
+    font-size: 60px;
+  }
+
+  .discover span {
+    text-align: center;
+  }
+
+}
+
+
 @media screen and (max-width: 768px) {
   .image {
     height: 550px;
@@ -376,19 +416,27 @@ p {
     display: none;
   }
 
-  .welcome p .border-left,
-  .border-right {
+  nav img {
     display: none;
   }
 
-  nav img {
+  .welcome h1 {
+    font-size: 30px;
+  }
+
+  .welcome em {
+    font-size: 55px;
+  }
+
+  .welcome p .border-left,
+  .border-right {
     display: none;
   }
 
   .intro {
     flex-direction: column;
     align-items: center;
-    top: 600px;
+    top: 700px;
   }
 
   .card {
@@ -401,6 +449,7 @@ p {
     flex-flow: column;
     text-align: center;
     padding-top: 300px;
+    margin: 50px;
   }
 
   .story {
@@ -408,12 +457,9 @@ p {
   }
 
   .discover {
-    /* display: flex;
-    text-align: center; */
-    margin: 30px;
-    padding-top: 250px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 300px;
+    padding-left: 95px;
+    padding-right: 95px;
   }
 
   .welcome {
@@ -459,7 +505,12 @@ p {
   }
 
   .intro {
-    top: 670px
+    top: 670px;
+  }
+
+  .tag::after{
+    content: "\a";
+    white-space: pre;
   }
 
   .story {
@@ -480,4 +531,5 @@ p {
     width: 280px;
     height: 240px;
   }
+
 }
