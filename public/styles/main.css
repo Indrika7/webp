@@ -508,7 +508,7 @@ p {
     top: 670px;
   }
 
-  .tag::after{
+  .tag::after {
     content: "\a";
     white-space: pre;
   }
